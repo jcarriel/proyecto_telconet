@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+{% include('navbar.html.twig') %}
+ <div class="container">
+    <div class="row">
+        <div class="col-sm">
+        <h1>NUEVO PRODUCTO</h1>
+
+        {{ include('productos/_form.html.twig') }}
+
+        <a href="{{ path('productos_index') }}" style=" margin-left: 15px; margin-top: 5px;" class="btn btn-sm btn-info">REGRESAR A LA LISTA</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

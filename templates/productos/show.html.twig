@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+{% include('navbar.html.twig') %}
+<div class="container">
+    <h1>Productos</h1>
+    <table class="table table-striped table-bordered">
+        <tbody>
+            <tr>
+                <th>ID</th>
+                <td>{{ producto.id }}</td>
+            </tr>
+            <tr>
+                <th>CODIGO</th>
+                <td>{{ producto.codigo }}</td>
+            </tr>
+            <tr>
+                <th>DESCRIPCION</th>
+                <td>{{ producto.descripcion }}</td>
+            </tr>
+            <tr>
+                <th>PRECIO</th>
+                <td>{{ producto.precio }}</td>
+            </tr>
+            <tr>
+                <th>STOCK</th>
+                <td>{{ producto.stock }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('productos_index') }}"class="btn btn-info btn-sm">VOLVER</a>
+
+    <a href="{{ path('productos_edit', {'id': producto.id}) }}" class="btn btn-warning btn-sm">EDITAR</a>
+
+    {{ include('productos/_delete_form.html.twig') }}
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+{% include('navbar.html.twig') %}
+ <div class="container">
+ {% for message in app.flashes('exito') %}
+    <div class="alert alert-warning">
+        {{ message }}
+    </div>
+{% endfor %}
+    <div class="row">
+    <div class="col-sm">
+    <h1>Editar Producto</h1>
+
+    {{ include('productos/_form.html.twig', {'class': 'btn btn-info btn-sm','button_label': 'ACTUALIZAR'}) }}
+
+    <a href="{{ path('productos_index') }}" class="btn btn-info btn-sm">VOLVER</a>
+
+    {{ include('productos/_delete_form.html.twig') }}
+   </div>
+</div>
+</div>
+{% endblock %}

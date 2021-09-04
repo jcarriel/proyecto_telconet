@@ -1,0 +1,17 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="{{path('home')}}">ABC</a>
+    </div>
+    <ul class="nav navbar-nav">
+     <li class="nav-item">
+        <a class="nav-link" href="{{path('productos_index')}}"
+          >Productos <span class="sr-only">(current)</span></a
+        >
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="{{ path('logout')}}"><span class="glyphicon glyphicon-user"></span> Salir</a></li>
+    </ul>
+  </div>
+</nav>
